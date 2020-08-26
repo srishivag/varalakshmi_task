@@ -1,0 +1,8 @@
+{
+    "apps": [{
+      "name": "MP-Server-3031",
+      "script": "./server.js",
+      "watch": "./src",
+      "log_date_format": "YYYY-MM-DD HH:mm Z"
+    }]
+}

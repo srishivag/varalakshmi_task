@@ -1,0 +1,29 @@
+<div class="container notfound">
+    <div class="row">
+        <div class="col-md-12 text-center" style="margin-top: 150px;">
+            <h3>404</h3>
+            <p>Page not found.</p>
+        </div>
+        <div class="col-md-12 text-center">
+            <!-- <div class="card">
+                Session is expired, please log in.
+            </div> -->
+            <div class="alert alert-danger" *ngIf="role == ''">
+                Session expired, please log in.
+            </div>
+            <div class="alert alert-warning" *ngIf="!role == ''">
+                Invalid url, please check once.
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h6>Go To <a routerLink="/{{ url }}">{{ pageType }}!</a></h6>
+        </div>
+        <br>
+        <div class="col-md-12 text-center">
+            <h6>Client IP Address: <a routerLink="/{{ currentUrl }}">{{ clientIP }}</a></h6>
+        </div>
+    </div>
+</div>

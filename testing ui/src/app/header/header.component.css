@@ -1,0 +1,59 @@
+.fa {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.user {
+  font-size: 1.5rem !important;
+}
+
+a {
+  cursor: pointer;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.back {
+  color: whitesmoke;
+}
+
+
+.collapse {
+  color: whitesmoke;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}
+
+.roleActive {
+  color: #1668af;
+}
+
+.lanActive {
+  color: #1668af;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  margin-left: 15px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: #c54040;
+  color: white;
+}
+
+.site-header {
+  background-color: #1668af;
+}
+
+.btn-view {
+  margin-left: 32px;
+  border: 1px solid #1668af;
+}
+
+.btn-view:hover {
+ color: white;
+ background-color: #1668af;
+}

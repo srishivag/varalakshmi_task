@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg border-bottom site-header">
+  <i class="fa fa-bars" aria-hidden="true" id="menu-toggle"></i>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto mt-lg-0">
+      <li class="nav-item dropdown mr-5">
+        <a role="button" aria-haspopup="true" aria-expanded="true">
+          <span><b>Role : {{role}} <br>
+            Username : {{username}}</b></span>
+        </a>
+      </li>
+
+      <li class="nav-item dropdown mr-5" *ngIf="!hideSwitch">
+        <a class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <i class="fa fa-reply" aria-hidden="true"></i><span class="ml-2">Switch</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a class="dropdown-item" *ngFor="let item of rolesArr" (click)="changeRole(item)"
+            [ngClass]="{'roleActive': item == role}">{{ item }}</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown mr-5" *ngIf="hideSwitch">
+        <a class="nav-link back" [routerLink]="['/admin/dashboard']" aria-haspopup="true" aria-expanded="true">
+          <i class="fa fa-reply" aria-hidden="true"></i><span class="ml-2">Back</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <img src="../../assets/images/admin-avatar.png" alt="_profileImg" class="rounded-circle" width="30"
+            height="30">
+          <!-- <i class="fa fa-user-circle-o user" aria-hidden="true"></i> -->
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a class="dropdown-item" routerLink="/{{ role }}/profile"
+            [ngClass]="{'roleActive': href == '/admin/profile'}">Account</a>
+          <a class="dropdown-item" (click)="logOut()">Logout</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

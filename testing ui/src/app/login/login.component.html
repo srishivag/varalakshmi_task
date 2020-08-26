@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row">
+        <div class="w3-card-4" style="width: 50%;margin-left: 25%;" >
+            <header class="w3-container w3-light-grey">
+                <h3 class="text-center">EMPLOYEE <span class="home">TIME SHEET</span></h3>
+            </header>
+
+            <div class="w3-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- <div class="container" id="id01"> -->
+                            <form action="" method="post">
+                                <div class="imgcontainer">
+                                    <img src="../../assets/images/avatar-2.png" alt="Avatar" class="avatar">
+                                </div>
+
+                                <div class="container">
+                                    <label for="uname"><b>Username</b></label>
+                                    <input type="text" placeholder="Enter Username" name="uname" [(ngModel)]="username"
+                                        required>
+
+                                    <label for="psw"><b>Password</b></label>
+                                    <input type="password" placeholder="Enter Password"  name="psw"
+                                        [(ngModel)]="password" required>
+
+                                    <button type="submit"  (click)="userLogin()">Login</button>
+
+                                    <div class="alert-danger" *ngIf="isFalied">
+                                        <span class="closebtn"
+                                            onclick="this.parentElement.style.display='none';">&times;</span>
+                                        <strong>Failed!</strong> Invalid username or password.
+                                    </div>
+                                    <div class="alert-success" *ngIf="isSuccess">
+                                        <span class="closebtn"
+                                            onclick="this.parentElement.style.display='none';">&times;</span>
+                                        <strong>Success!</strong> Login successful.
+                                    </div>
+                                    <div class="alert-info" *ngIf="isInfo">
+                                        <span class="closebtn"
+                                            onclick="this.parentElement.style.display='none';">&times;</span>
+                                        <strong>Warning!</strong> Required fields are empty.
+                                    </div>
+                                    <div class="alert-danger" *ngIf="isBlock">
+                                      <span class="closebtn"
+                                        onclick="this.parentElement.style.display='none';">&times;</span>
+                                      <strong>Failed!</strong> User is blocked.
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- </div> -->
+                        </div>
+                        <div class="col-md-6">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="w3-container w3-light-grey text-center">
+                    CopyRights &copy; <a href="http://localhost:4200/" target="">Employee Home.</a> All
+                    Rights Reserved.
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>

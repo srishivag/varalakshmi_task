@@ -1,0 +1,14 @@
+
+.tiny-footer {
+    font-size: 14px;
+    /* padding: 14px 0px; */
+    font-weight: 600;
+    background-color: transparent;
+    color: #888d90;
+    line-height: 1;
+  }
+  
+  .copyrightlink {
+    text-decoration: none !important;
+    color: #1668af !important;
+  }
